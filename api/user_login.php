@@ -35,6 +35,7 @@
 		}
 		$responseObj->row = $json_array;
 		$responseObj->status = "Welcome ...";
+		http_response_code(200);
 		}
 				
  		$responseJSON = json_encode($responseObj); 
@@ -44,7 +45,7 @@
 		{
 		
 		$responseObj->status = "Not Registerd";
-			
+		http_response_code(500);	
  		$responseJSON = json_encode($responseObj); 
 		echo $responseJSON;	
 		}

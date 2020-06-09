@@ -35,6 +35,7 @@
 		}
 		$responseObj->row = $json_array;
 		$responseObj->status = "success";
+		http_response_code(200);
 		}
 				
  		$responseJSON = json_encode($responseObj); 
@@ -54,6 +55,7 @@
 		}
 		$responseObj->row = $json_array;
 		$responseObj->status = "all users";
+		http_response_code(200);
 		}
 				
  		$responseJSON = json_encode($responseObj); 
