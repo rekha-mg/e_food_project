@@ -26,7 +26,8 @@ if($res=mysqli_query($link,$sql))
 	if($rowcount ==1)
 	{
 		$responseObj->status = "U Already exist.. ".$nm;
-
+		http_response_code(208);
+		}
 	}
 	else
 	{ // New user insertion
@@ -35,7 +36,7 @@ if($res=mysqli_query($link,$sql))
 		if($ress=mysqli_query($link,$sqll))
 		{ 
 			$responseObj->status = "success";
-			http_response_code(200);
+			http_response_code(201);
 		}
 		else
 		{

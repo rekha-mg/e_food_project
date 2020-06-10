@@ -34,7 +34,7 @@ if($res=mysqli_query($link,$sql))
 		if($ress=mysqli_query($link,$sqll))
 		{ 
 			$responseObj->status = "Added new food Item";
-			http_response_code(200);
+			http_response_code(201);
 		}
 		else
 		{

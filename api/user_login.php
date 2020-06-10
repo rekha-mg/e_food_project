@@ -39,13 +39,15 @@
 		}
 				
  		$responseJSON = json_encode($responseObj); 
+ 		
+		}
 		echo $responseJSON;		
 	}
 	else
 		{
 		
 		$responseObj->status = "Not Registerd";
-		http_response_code(500);	
+		http_response_code(401);	
  		$responseJSON = json_encode($responseObj); 
 		echo $responseJSON;	
 		}
